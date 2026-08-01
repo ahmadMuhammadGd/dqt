@@ -1,4 +1,6 @@
-DQT is an open-source data quality framework designed for modern data platforms. It enables developers to define reusable data quality rules as code and execute them consistently across multiple execution engines, including PySpark. Rather than treating data quality as a reporting layer, DQT produces structured validation artifacts that can be stored, versioned, and analyzed alongside the data itself. The framework separates test definitions, execution, and artifact storage through a modular architecture, making it easy to integrate into existing ETL/ELT pipelines while remaining independent of any specific storage technology or orchestration platform.
+Modern data quality tools tell you whether a pipeline passed or failed. They rarely tell you which records failed, exactly which rules they violated, how those rules evolved over time, or how quality changes historically.
+
+dqt is an open-source data quality engine that executes validations across multiple query engines, while persisting every test definition, execution, and row-level result into an analytical data model. This makes data quality measurable, auditable, and analyzable like any other business dataset.
 
 ----
 
