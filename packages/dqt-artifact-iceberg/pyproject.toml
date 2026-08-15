@@ -1,0 +1,18 @@
+[project]
+name = "dqt-artifact-iceberg"
+version = "0.1.0"
+dependencies = [
+    "dqt>=0.1,<0.2", 
+    "pyiceberg[sql-sqlite]>=0.11.1", 
+    "pyarrow>=25.0.0"
+    ]
+
+[project.entry-points."dqt.artifacts"]
+iceberg = "dqt_artifact_iceberg.persist:IcebergArtifactBackendPersist"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dqt_artifact_iceberg"]
